@@ -47,11 +47,13 @@ const Review = (props) => {
 export const FeedBack = () => {
   return (
     <>
-      <Card sx={{ padding: "20px", maxHeight: "450px", overflowY: "auto" }}>
+      <Card sx={{ padding: "20px" }}>
         <Typography variant="h6">Customer's Feedback</Typography>
-        {mockApiData.map((item) => (
-          <Review key={item.id} {...item} />
-        ))}
+        <Box sx={{ maxHeight: "450px", overflowY: "auto" }}>
+          {mockApiData.map((item) => (
+            <Review key={item.id} {...item} />
+          ))}
+        </Box>
       </Card>
     </>
   );

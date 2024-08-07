@@ -65,7 +65,7 @@ const SideNavigation = (props) => {
           component="div"
           py={2}
           px={1}
-          sx={{ display: { xs: "none", sm: "block" } }}
+          sx={{ display: { xs: "none", sm: "block", fontSize: "1em" } }}
         >
           FITpeo
         </Typography>

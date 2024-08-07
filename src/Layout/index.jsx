@@ -44,18 +44,20 @@ const Layout = ({ children }) => {
   };
 
   useEffect(() => {
-    const checkWindowSize = window.addEventListener("resize", () => {
+    const handleSideNav = () => {
       if (window.innerWidth > 767) {
         setOpen(true);
       } else {
         setOpen(false);
       }
-    });
+    };
+    const checkWindowSize = window.addEventListener("resize", handleSideNav);
+    handleSideNav();
 
     return () => {
       window.removeEventListener("resize", checkWindowSize);
     };
-  }, [open]);
+  }, []);
 
   return (
     <>

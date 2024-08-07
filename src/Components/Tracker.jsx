@@ -111,7 +111,7 @@ export function Tracker() {
   return (
     <Grid container spacing={2}>
       {mockApiData.map((item, index) => (
-        <Grid key={item.id} item xs={12} sm={6} md={6}>
+        <Grid key={item.id} item xs={12} sm={6} md={3}>
           <MyCard {...item} index={index} />
         </Grid>
       ))}
